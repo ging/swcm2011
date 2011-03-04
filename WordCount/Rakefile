@@ -1,0 +1,10 @@
+require 'rake'
+require 'rake/rdoctask'
+
+Rake::RDocTask.new(:rdoc) do |rdoc|
+  rdoc.rdoc_dir = 'rdoc'
+  rdoc.title    = 'WordCouint'
+  rdoc.options << '--line-numbers' << '--inline-source'
+  rdoc.rdoc_files.include('lib/**/*.rb')
+end
+
