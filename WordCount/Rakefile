@@ -1,6 +1,8 @@
 require 'rake'
 require 'rake/rdoctask'
 
+require 'rake/testtask'
+
 Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'WordCouint'
@@ -8,3 +10,11 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
+Rake::TestTask.new(:test) do |t|
+  t.libs << 'lib'
+  t.libs << 'test'
+  t.pattern = 'test/**/*.rb'
+  t.verbose = false
+end
+
+task :default => :test
