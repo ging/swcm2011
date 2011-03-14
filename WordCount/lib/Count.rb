@@ -1,13 +1,14 @@
 # Count incluye el método "count_words" para contar palabras
 module Count
 
-  # Cuenta palabras. Cada palabra debe estar formada solo por letras ASCII
+  # Cuenta las palabras de un texto
   #
-  # Se reconocen con el patrón [a-zA-Z]+
+  # * Cada palabra debe contener solo caracteres ASCII, 
+  #   que son reconocidas por el patrón [a-zA-Z]+
   #
-  # Se ha implementado con un patron que reconoce cada palabra y
-  # la sustituye por la letra w. Luego se calcula la longitud de la cadena
-  # generada
+  # * Se ha implementado con un patron que reconoce cada palabra y
+  #   la sustituye por la letra w. Luego se calcula la longitud de la cadena
+  #   generada
   def count_words(text)
     if (text =~ /[^a-zA-Z]*\\Z/) then text = "" end  # elimina ficheros sin palabras
 
