@@ -5,7 +5,7 @@ require 'rake/testtask'
 
 Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'WordCouint'
+  rdoc.title    = 'WordCount'
   rdoc.options << '--line-numbers' << '--inline-source'
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
